@@ -1,0 +1,472 @@
+**********************************************************
+
+
+HTML
+
+
+**********************************************************
+
+
+
+HTML is a mark up language and not a programming language. A markup language is a system for annotating a document in a way that is syntactically distinguishable from the text. The idea and terminology evolved from the "marking up" of paper manuscripts, i.e., the revision instructions by editors, traditionally written with a blue pencil on authors' manuscripts.
+
+In digital media this "blue pencil instruction text" was replaced by tags, that is, instructions are expressed directly by tags or "instruction text encapsulated by tags." Markup instructs the software that displays the text to carry out appropriate actions, but is omitted from the version of the text that users see.
+
+HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user.
+
+The purpose of a web browser (Chrome, IE, Firefox, Safari) is to read HTML documents and display them.
+
+<!DOCTYPE html> is not actually an element but an instruction to the browser as to what type of HTML to use; here it's v5.
+
+Each HTML document has a head and a body. The head can include the title, CSS styles, info for search engines, and more. All the visible items are in the body.
+
+Attributes provide additional information about an element. For example image tags often include source and alternative text attributes:
+
+    <img src="./author.jpg" alt="Jackson Gonzalez" />
+
+To make a link open in another tab use the target attribute:
+
+    <a href="https://www.udemy.com/" target="_blank">Link to udemy</a>
+
+
+If you don't yet have your link address then use href="#". Also, to jsut go to the home page use href="/".
+
+
+Comments are created with this syntax: <!-- Write your comments here -->. Temporarily removing a line: <!-- <p>This is a paragraph.</p> -->
+
+Browser specific comments exist. The following tags have elements to be executed by Internet Explorer only:
+
+<!--[if IE 8]>
+    .... some HTML here ....
+<![endif]-->
+
+
+An inline element does not start on a new line and only takes up as much width as necessary. Examples include <span> <a> and <img>. 
+
+The <div> element is a block-level element that is often used as a container for other HTML elements. The <div> element has no required attributes, but style and class are common. When used together with CSS, the <div> element can be used to style blocks of content:
+
+	<div style="background-color:black; color:white; padding:20px;">
+
+	<h2>London</h2>
+	<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+	</div> 
+
+The <span> element is an inline element that is often used as a container for some text. The <span> element has no required attributes, but style and class are common. When used together with CSS, the <span> element can be used to style parts of the text:
+
+	<h1>My <span style="color:red">Important</span> Heading</h1>
+	
+
+The Head Element
+----------------------------
+
+The <head> element is a container for metadata (data about data). HTML metadata is data about the HTML document. Metadata is not displayed. Metadata typically define document title, styles, links, scripts, and other meta information. The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+
+In the HTML5 standard, the <html> tag, the <body> tag, and the <head> tag can be omitted, although this is not reccomended.
+
+The <html> element is the document root. It is the recommended place for specifying the page language: <html lang="en-US">. Declaring a language is important for accessibility applications (screen readers) and search engines. 
+
+The <title> element defines the title of the document. It is required in all HTML/XHTML documents.
+
+The <title> element:
+
+    -defines a title in the browser tab
+    -provides a title for the page when it is added to favorites
+    -displays a title for the page in search engine results
+
+Inside the <style> element you specify how HTML elements should render in a browser.
+
+The <link> element defines the page relationship to an external resource. It is most often used to link to style sheets.
+
+The <meta> element is used to specify page description, keywords, author, and other metadata. Metadata is used by browsers (how to display content), by search engines (keywords), and other web services. 
+
+Define keywords for search engines: <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+
+Define a description of your web page: <meta name="description" content="Free Web tutorials on HTML and CSS">
+
+Define the character set used: <meta charset="UTF-8">
+
+Define the author of a page: <meta name="author" content="Hege Refsnes">
+
+Refresh document every 30 seconds: <meta http-equiv="refresh" content="30">
+
+The <script> element is used to define client-side JavaScripts (see the Javascript section).
+
+The <base> element specifies the base URL and base target for all relative URLs in a page: <base href="http://www.w3schools.com/images/" target="_blank">
+
+
+
+HTML Attributes
+-----------------------------------
+
+Attributes provide additional information about HTML elements. Attributes are always specified in the start tag. Attributes come in name/value pairs like: name="value". All HTML elements can have attributes.
+
+
+HTML Paragraphs
+------------------------------------
+
+HTML documents are divided into paragraphs. Browsers automatically add an empty line before and after a paragraph.
+
+
+
+The HTML <br> element defines a line break without the need for a new paragraph: <p>This is<br>a para<br>graph with line breaks</p> comes out like:
+
+    This is
+    a para
+    graph with line breaks
+
+
+The HTML <pre> element defines pre-formatted text. The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks.
+
+
+HTML Text Formatting Elements and Computer Code
+----------------------------------------
+
+HTML defines special elements for defining text with a special meaning, such as <b> and <i> for formatting output, like bold or italic text. Special types of text include:
+
+    Bold text
+    Important text
+    Italic text
+    Emphasized text
+    Marked text
+    Small text
+    Deleted text
+    Inserted text
+    Subscripts
+    Superscripts
+
+The HTML <b> element defines bold text, without any extra importance: <p>This text is normal.<b>This text is bold.</b></p>
+
+The HTML <strong> element defines strong text, with added semantic "strong" importance: <p><strong>This text is strong</strong></p>(looks like bold text)
+
+The HTML <i> element defines italic text, without any extra importance: <p><i>This text is italic</i>.</p> 
+
+The HTML <em> element defines emphasized text, with added semantic importance: <p><em>This text is emphasized</em>.</p>. (looks like italics)
+
+The HTML <small> element defines small text: <h2>HTML <small>Small</small> Formatting</h2>
+
+The HTML <mark> element defines marked or highlighted text: <h2>HTML <mark>Marked</mark> Formatting</h2>
+
+The HTML <del> element defines deleted (removed) text: <p style="color:red">My favorite color is <del style="color:blue">blue</del> red.</p>
+
+The HTML <ins> element defines inserted (added) text: <p>My favorite <ins>color</ins> is red.</p> (seems to underline the text)
+
+The HTML <sub> element defines subscripted text: <p>This is <sub>subscripted</sub> text.</p>
+
+The HTML <sup> element defines superscripted text: <p>This is <sup>superscripted</sup> text.</p>
+
+The HTML <q> element defines a short quotation within a paragraph (quotation marks).
+
+The HTML <abbr> element defines an abbreviation or an acronym (tool tip for the full name): <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+The HTML <address> element defines contact information (author/owner) of a document or article.
+
+The HTML <cite> element defines the title of a work. Browsers usually display <cite> elements in italic: <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+ 
+The HTML <bdo> element defines bi-directional override:  <bdo dir="rtl">This text will be written from right to left</bdo>  (reverses the text direction)
+
+
+
+HTML Computer Code Elements
+------------------------------------------
+
+HTML normally uses variable letter size and spacing. This is not wanted when displaying examples of computer code. The <kbd>, <samp>, and <code> elements all support fixed letter size and spacing.
+
+HTML Links
+--------------------------------
+The general form of a link is <a href="url">link text</a> . The link text does not have to be text. It can be an HTML image or any other HTML element.
+By default (in all browsers), links appear underlines and as blue for unvisited, purple as visited, and red as active. You can change the default color
+with styles:
+		
+		<style>
+		a:link    {color:green; background-color:transparent; text-decoration:none}
+		a:visited {color:pink; background-color:transparent; text-decoration:none}
+		a:hover   {color:red; background-color:transparent; text-decoration:underline}
+		a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+		</style>
+	
+Removing the underline in a link: <a href="html_images.asp" target="_blank" style="text-decoration:none">HTML Images</a>
+	
+	
+The target attribute specifies where to open the linked document. This example will open the linked document in a new browser window or in a new tab:
+ <a href="http://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+ 
+Target Value 			Description
+
+_blank 					Opens the linked document in a new window or tab
+_self 					Opens the linked document in the same frame as it was clicked (this is default)
+_parent 				Opens the linked document in the parent frame
+_top 					Opens the linked document in the full body of the window and can be used to break out of a locked frame:
+						<p>Locked in a frame? <a href="http://www.w3schools.com/html/" target="_top">Click here!</a></p>
+framename 				Opens the linked document in a named frame
+
+
+An image as a link:
+
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0">
+</a> 
+
+Bookmarks are useful for large web pages. To make a bookmark, you must first create the bookmark, and then add a link to it. First, create a bookmark with the id attribute: <h2 id="tips">Useful Tips Section</h2> . Then, add a link to the bookmark ("Useful Tips Section"), from within the same page: 
+<a href="#tips">Visit the Useful Tips Section</a> . Or, add a link to the bookmark ("Useful Tips Section"), from another page:  <a href="html_tips.htm#tips">Visit the Useful Tips Section</a> . 
+
+
+A local link (link to the same web site) is specified with a relative URL (without http://www....):   <a href="html_images.asp">HTML Images</a> 
+
+
+Images
+-------------------------------------------
+
+The src attribute specifies the URL (web address) of the image: <img src="url" alt="some_text"> .
+
+The alt attribute specifies an alternate text for an image, if the image cannot be displayed. The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader). 
+
+Use the <map> tag to define an image-map. An image-map is an image with clickable areas. The name attribute of the <map> tag is associated with the <img>'s usemap attribute and creates a relationship between the image and the map. The <map> tag contains a number of <area> tags, that defines the clickable areas in the image-map:
+
+    <map name="planetmap">
+    <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+    <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+    <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+    </map>
+
+
+Layouts
+-------------------------------
+
+HTML5 offers new semantic elements that define different parts of a web page (and slots them together):
+	
+    <header> - Defines a header for a document or a section
+    <nav> - Defines a container for navigation links
+    <section> - Defines a section in a document
+    <article> - Defines an independent self-contained article
+    <aside> - Defines content aside from the content (like a sidebar)
+    <footer> - Defines a footer for a document or a section
+    <details> - Defines additional details
+    <summary> - Defines a heading for the <details> element
+
+
+
+
+iframes
+--------------------------------
+
+An iframe is used to display a web page within a web page with the following syntax: <iframe src="URL"></iframe>
+
+
+Special Entities
+----------------------------
+
+Reserved characters, and characters not present on your keyboard, must be replaced with 'character entity' codes. For example, if you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags. 
+
+
+Result 		Description 			Entity Name 		Entity Number
+
+			non-breaking space 		&nbsp; 				&#160;
+-           hyphen                  &mdash;
+< 			less than 				&lt; 				&#60;
+> 			greater than 			&gt; 				&#62;
+& 			ampersand 				&amp; 				&#38;
+¢ 			cent 					&cent; 				&#162;
+£ 			pound 					&pound; 			&#163;
+¥ 			yen 					&yen; 				&#165;
+€ 			euro 					&euro; 				&#8364;
+© 			copyright 				&copy; 				&#169;
+® 			registered trademark 	&reg; 				&#174;
+
+
+The advantage of using an entity name, instead of a number, is that the name is easier to remember. The disadvantage is that browsers may not support all entity names, but the support for numbers is good.
+
+A diacritical mark is a "glyph" added to a letter. Some diacritical marks, like grave (  ̀) and acute (  ́) are called accents. Diacritical marks can appear both above and below a letter, inside a letter, and between two letters. Diacritical marks can be used in combination with alphanumeric characters, to produce a character that is not present in the character set (encoding) used in the page. Here are some examples:
+
+Mark 	Character 	Construct 	Result
+  ̀ 		a 			a&#768; 	à
+  ́ 		a 			a&#769; 	á
+̂ 		a 			a&#770; 	â
+  ̃ 		a 			a&#771; 	ã
+  ̀ 		O 			O&#768; 	Ò
+  ́ 		O 			O&#769; 	Ó
+̂ 		O 			O&#770; 	Ô
+  ̃ 		O 			O&#771; 	Õ
+
+  
+Some mathematical symbols:  
+  
+Char 	Number 		Entity 		Description
+
+∀ 		&#8704; 	&forall; 	FOR ALL
+∂ 		&#8706; 	&part; 		PARTIAL DIFFERENTIAL
+∃ 		&#8707; 	&exist; 	THERE EXISTS
+∅ 		&#8709; 	&empty; 	EMPTY SETS
+∇ 		&#8711; 	&nabla; 	NABLA
+∈ 		&#8712; 	&isin; 		ELEMENT OF
+∉ 		&#8713; 	&notin; 	NOT AN ELEMENT OF
+∋ 		&#8715; 	&ni; 		CONTAINS AS MEMBER
+∏ 		&#8719; 	&prod; 		N-ARY PRODUCT
+∑ 		&#8721; 	&sum; 		N-ARY SUMMATION
+
+A full math reference is at http://www.w3schools.com/charsets/ref_utf_math.asp 
+
+Greek Letters:
+
+Char 	Number 	Entity 		Description
+Α 		&#913; 	&Alpha; 	GREEK CAPITAL LETTER ALPHA
+Β 		&#914; 	&Beta; 		GREEK CAPITAL LETTER BETA
+Γ 		&#915; 	&Gamma; 	GREEK CAPITAL LETTER GAMMA
+Δ 		&#916; 	&Delta; 	GREEK CAPITAL LETTER DELTA
+Ε 		&#917; 	&Epsilon; 	GREEK CAPITAL LETTER EPSILON
+Ζ 		&#918; 	&Zeta; 		GREEK CAPITAL LETTER ZETA
+
+See the bottom of http://www.w3schools.com/html/html_symbols.asp for more links
+
+
+Character 	From Windows-1252 	From UTF-8
+
+€ 			%80 				%E2%82%AC
+£ 			%A3 				%C2%A3
+© 			%A9 				%C2%A9
+® 			%AE 				%C2%AE
+À 			%C0 				%C3%80
+Á 			%C1 				%C3%81
+Â 			%C2 				%C3%82
+Ã 			%C3 				%C3%83
+Ä 			%C4 				%C3%84
+Å 			%C5 				%C3%85
+
+
+
+Forms
+----------------------------
+
+HTML forms, using the <form> element, are used to collect user input. Form elements are different types of input elements; checkboxes, radio buttons, submit buttons, and more. The <input> element is the most important form element. The <input> element has many variations, depending on the type attribute. Examples include text, radio, and submit. You can also stop navigation until it is completes by using the required attribute.
+
+<input type="text"> defines a one-line input field for text input (with a default witdth of 20 characters for the input box):
+
+    <form>
+        First name:<br>
+        <input type="text" name="firstname">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname">
+    </form> 
+
+<input type="email" name="email" id="email" placeholder="Your email" required>  defines a required input for an email address.
+
+Also, if you specify a `for` attribute in an associated label, clicking on the label will take you to the form. The value of 'for' must be the same as the value of the input's id attribute. 
+
+    <div class="col span-1-of-3">
+        <label for="email">Email</label>
+    </div>
+    <div class="col span-2-of-3">
+        <input type="email" name="email" id="email" placeholder="Your email" required>
+    </div>
+
+<input type="radio"> defines a radio button. Radio buttons let a user select ONE of a limited number of choices:
+
+    <form>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+    </form> 
+
+
+To make a drop down box we use a select element with option elements. The initial visible option will be the one with the selected attribute.
+
+    <select name="find-us" id="find-us">
+        <option value="friends" selected>Friends</option>
+        <option value="search">Search engine</option>
+        <option value="ad">Advertisement</option>
+        <option value="other">Other</option>
+    </select>
+
+
+A checkbox:
+
+    input type="checkbox" name="news" id="news" checked> Yes, please
+
+
+The last thing we need is a submit button. 
+
+<input type="submit"> defines a button for submitting a form to a form-handler. The form-handler is typically a server page with a script for processing input data. The form-handler is specified in the form's action attribute:
+
+    <form action="action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> 
+
+
+The action attribute defines the action to be performed when the form is submitted. The common way to submit a form to a server, is by using a submit button. 
+Normally, the form is submitted to a web page on a web server. In the example above, a server-side script is specified to handle the submitted form.
+
+The method attribute specifies the HTTP method (GET or POST) to be used when submitting the forms: <form action="action_page.php" method="get"> or <form action="action_page.php" method="post">
+
+You can use GET (the default method) if the form submission is passive (like a search engine query), and without sensitive information. When you use GET, the form data will be visible in the page address. GET is best suited to short amounts of data. Size limitations are set in your browser. 
+
+You should use POST if the form is updating data, or includes sensitive information (password). POST offers better security because the submitted data is not visible in the page address.
+
+To be submitted correctly, each input field must have a name attribute. 
+
+An HTML <form> element, with all possible attributes set, will look like this: 
+
+
+<form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
+enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+.
+form elements
+.
+</form>
+
+Attribute 			Description
+
+accept-charset 		Specifies the charset used in the submitted form (default: the page charset).
+action 				Specifies an address (url) where to submit the form (default: the submitting page).
+autocomplete 		Specifies if the browser should autocomplete the form (default: on).
+enctype 			Specifies the encoding of the submitted data (default: is url-encoded).
+method 				Specifies the HTTP method used when submitting the form (default: GET).
+name 				Specifies a name used to identify the form (for DOM usage: document.forms.name).
+novalidate 			Specifies that the browser should not validate the form.
+target 				Specifies the target of the address in the action attribute (default: _self).
+
+
+
+
+
+
+
+Media
+-------------------------
+
+The HTML5 <video> element specifies a standard way to embed a video in a web page:
+
+ <video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video> 
+
+The controls attribute adds video controls, like play, pause, and volume. Text between the <video> and </video> tags will only display in browsers that do not support the <video> element. Multiple <source> elements can link to different video files. The browser will use the first recognized format.
+
+To start a video automatically use the autoplay attribute: <video width="320" height="240" autoplay> ...
+
+MP4 is the new and upcoming format for internet video. It is recommended by YouTube, supported by Flash Players and HTML5.
+
+The HTML5 <audio> element specifies a standard way to embed audio in a web page:
+
+ <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+
+The purpose of a plug-in (aka helper application), is to extend the functionality of the HTML browser. Examples of well-known plug-ins are Java applets. Plug-ins can be added to web pages with the <object> tag or the <embed> tag. Plug-ins can be used for many purposes: display maps, scan for viruses, verify your bank id, etc.
+
+The <object> element is supported by all browsers. It defines an embedded object within an HTML document. It is used to embed plug-ins (like Java applets, PDF readers, Flash Players) in web pages:  <object width="400" height="50" data="bookmark.swf"></object> 
+
+The <object> element can also be used to include HTML in HTML:  <object width="100%" height="500px" data="snippet.html"></object> 
+
+Or images if you like:  <object data="audi.jpeg"></object> 

@@ -1,0 +1,149 @@
+
+
+
+
+
+Do pet projects. Push them to github with an elegant readme. Follow all the best practices. Do not write messy code just because it's your pet project. Create a detailed portfolio out of these projects and put them out in your personal website.
+
+Contribute to open source projects. Even little things like improving a sentence in documentation or reporting a new bug are very important.
+
+Network!!!! Go to tech meet ups, events, conferences. Actively participate in online tech communities such as SOF.
+
+
+
+
+
+What are the biggest myths software engineers believe?
+
+My favourite - I know what I'm doing.
+This code I'm inheriting is crap. I'll have to write it from scratch.
+This is just a temporary hack - I'll come back and fix it later.
+I will commit all my changes at once, once I am done.
+The developer who can code the best is the one that would who should be promoted.
+There is lot of management, that I am wasting time on meetings instead of writing code
+Younger devs are better than older ones
+To be a good developer, you also have to behave nerdy and awkward
+Smarter developers are all that's needed to produce better code
+The business team have no idea what they want.
+My language/framework/operating system is better, faster, most robust than Yours.
+I don't need to learn other languages other than what I master. Using this language I can program any solution.
+Objects are good- Everything should be an object.
+Design patterns are good. If a ‘pattern’ is indeed re-usable, it should be a made into a reusable class or framework (like Model-View-Controller.)
+Development time is predictable and every risk can be managed.
+My way of structuring code is clear and concise. Everyone else can understand.
+I don't like this style of code, it should be refactored to how I do things.
+I'm an awesome programmer.
+Code reviews are a waste of time.
+Meetings are a waste of time.
+Junior programmers aren't experienced enough to have input into the design, structure, etc.
+If I just copy paste code once I wont do it again.
+Writing long methods, classes, etc. make code more readable, since it keeps related code close.
+My code is too complicated for unit testing.
+I've learned everything I need to know to do my job. I should only learn new things purely on a need-to basis.
+I should only fix issues once a client complains. It's ok to ignore/overlook bugs I come across otherwise. It's a waste of time to fix those unless absolutely necessary; I have better things to do.
+Last but not the least -Using Mac OSX makes a better programmer
+
+
+
+
+Testing:
+
+
+What should beginner programmers know about software testing?
+Brian Fey
+Brian Fey, Founder / Director at Bosque Village (2004-present)
+Updated Jul 3, 2015
+Without good testing, software companies fail. 
+
+I started working with software development in 1985. (First program written in 1979, but I was in 6th grade, so not ready to be in the industry.)
+
+Over and over, there were waves of software booms but many companies failed because flaws in the software created a need for costly technical support or bugged the user into turning to another product. 
+
+As a beginning developer, have your friends look over your work and code with a critical eye. You will both improve your skills. 
+
+There is no successful development without testing. 
+When I was a Test Manager, sitting next to the Development Manager for my group, Bill Gates told us, "Microsoft is not a software development company. Microsoft is a software testing company." I was pleased with Bill's words since my Dev manager had come from a military background and had arrived to Microsoft believing that testing should happen only after the coding has been finished. He did not think testers should have access to the source code and was used to very solid specs. That caused some initial conflict but he soon adjusted to the development cycle at Microsoft. Unlike the military, we were often working with changing specs, and always working to serve very diverse customers. After some struggles we settled into managing our dev and test teams into a very productive relationship and made great products. 
+
+Do you need testers?
+Testers are kind of like editors for writers. 
+I think it would be wrong to say "you can't edit your own work" or that "You can't test your own code".  You can and you should. 
+But having an editor or a tester protects you from your own lack of vision. Your eyes cannot see your creation as the user will. 
+A qualified, motivated editor or tester can make you look very good, and in the case of software, save your company. 
+
+Testers have a strange eye. 
+Software testing requires a strange skill. I interviewed, hired and fired many people over my years in the industry. 
+You can learn some skills for testing, but I don't know that the intuition and analytical viciousness can be taught. Some people seem to just have that critical eye that most people don't 
+I have done interviews and shown applicants a program to evaluate. Some find a small problem or two. The ones I hired could rip apart many aspects of the design. They can see options which don't exist and wonder why one is better than another. And they are able to see through the eyes of an innocent or ignorant user and wonder what failures of user experience could occur. Testing is a strange discipline requiring intuition.  Testers protect users from the bad influence of marketing, and the programmer geek who can't see from the novice user's perspective.
+
+Testing should be involved from the beginning. 
+Testing is cheap in the long run. Using the critical eyes of testing to find problem at the spec level make for easy fixes.  
+If you have to find a problem in Usability Testing, then it will lot more to fix and indicates you may have a problem in your development process. 
+In the rush to market, it is worth it to have advocates protecting the user, making sure the product is accessible to people of different abilities, will operate on various platforms, and be able to be internationalized later. 
+
+Be nice to your testers. Be nice to your developers. 
+In a sense, testing and development can have an apparent adversarial relationship. Try to keep it pleasant knowing you are on the same team. Creation and destruction go together like Yin and Yang.
+Testers should write very clear bug reports to help it be easy for the developer to see and reproduce the problem. Developers should not see bugs as criticism, but as help. 
+Testing is a mostly thankless job. As a tester you get to take credit for the bugs that are not there. 
+
+Web testing?
+I suspect testing has gotten easier for some types of software development. 
+Rather than risk millions of dollar manufacturing CDs with the risks of a bug you can't fix , web developers have the option of fixing errors and delivering them instantly. 
+But with web development, testing still matters. Errors piss users off, and sometimes there is no way to say you are sorry. Even a brief bad user experience can drive your user away forever and damage your brand. 
+
+
+Testers do slow things down. It is worth it. 
+All products ship with bugs. 
+Sometimes, no matter which way you do something, it is still a bug. 
+
+
+
+
+
+
+
+
+I can only truly speak to myself as a 10x developer, and here’s what I believe to be different about me and the other 10x (or even 100x) developers vs my 1–2x peers:
+
+Understanding how things work.
+I hate “magic” software frameworks and I will spend countless hours making sure I understand what’s going on behind the scenes before I’ll write production software in that system.
+There’s no shame in not understanding how something works and spending time learning it. Even if it takes you longer than your friend.
+Understanding how software and related hardware things fit together.
+Similarly to the above - I hate “magic” systems - I won’t trust myself to work with a system I’m talking to until I understand how it works (at a medium level).
+For example, I learned how to use TCP/IP very early and I really dove in - I wrote clients and servers, hand-wrote HTTP clients and such, because I wanted to prove to myself that I understood how it worked.
+Understanding the business/problem domain well before we design and write software for the domain.
+For example - if I’m working for a company that sells products in stores, I try to understand as much as I can about the business - what types of products, what types of customers, what types of business rules, etc. Especially the first few times you do this, you will be amazed at how much software you can avoid writing to solve problems that won’t exist.
+Note that this is one of the keys to being 10x : don’t write software that you don’t need.
+Identifying and anticipating the most common changes that are likely to be made by our customers, and building our software to support those types of changes, BUT NO OTHERS
+Many developers think that they’re being smart by abstracting everything, but really, they’re just mimicking more skilled developers without understanding why.
+Anticipating the few most likely changes is smart. 70% of the time, the changes will be in those areas. Trying to design your software to support any possible change is a huge waste of time for everyone.
+This requires experience, which takes time, be patient.
+Not writing software to show off our sophistication, intellect or skill.
+I focus on solving the problem in a clear and understandable way.
+The most likely future reader of my software is me, and after a few weeks, I’ll be completely lost if i didn’t write it clearly the first time.
+If I come back to my software and I find it confusing and complicated, I immediately rewrite it if I can, so it is no longer confusing and complicated.
+Writing our software with the assumption that we won’t remember how it works the next time we look at it.
+I love Test-First Development, because it forces me to think about the software as a client, rather than the developer.
+It also makes my software more modular, because I have to think about the different pieces as individually testable elements.
+I write lots of unit tests where I can.
+Partially because it makes my software better
+Mostly because I work on so many different software projects over time that whenever there’s a bug 3 months down the road, I can use the unit tests to help re-orient me to the software I’m debugging.
+I also have a few personal habits that I’ve developed over time:
+
+When I was younger, I wrote lots of libraries because I didn’t like the libraries that were out there, they weren’t intuitive enough for me.
+This taught me how the libraries worked, which was really helpful
+But over time, I grew to accept that it was much more efficient to spend my time understanding the philosophy of the person who wrote the library, rather than writing my own version of it.
+After you do this a few times, you start to recognize the common philosophical approaches, and it cuts down on your learning time for new libraries, which makes you more effective.
+There are douchebags everywhere who will criticize every line of software produced that doesn’t conform to their exact preferred strategy. They will try to make you feel inferior and stupid for not “doing it their way”
+Almost without exception, they are far better at shaming than they are at software development.
+In other words, to the extent possible, don’t let them take up your time or energy. Just smile, nod and do it your way anyways
+This is classic “correlation, not causation”, but I spent a lot of time building with legos when I was younger.
+
+
+
+Promotions:
+
+Promotions are about the future, not the past: Some people think, “I’ve done all this great work, so I should get promoted!” But managers don’t give out promotions as a reward for great work—instead, they promote you only if you can benefit the company more at the higher level. A promotion is about the future: if you can add more value to the company as a principal engineer than as a senior engineer, then you will be promoted.
+The higher levels are about increases in scope: You won’t necessarily rise in level by just getting better at what you do—you need to expand the scope of what you do. For example, if you’re an engineer who owns a feature in a product, you need to starting thinking about the entire product. If you’re a senior engineer with a good grasp on the whole product, you need to start thinking about the engineering process of the team and its relationship with other groups in the company.
+Influence without authority is critical: As an entry level engineer or even a senior engineer, you can basically just do what you’re told and succeed. At the higher levels, you will need to participate in collective decision making with other members of the team and with other teams in the company. Can you convince your team-mates to follow a certain architectural path? Can you convince another team to take a dependency on yours? Can you convince your VP to give you more resources or more time (or alter the requirements)? The better you are at this, the more valuable you’ll be to the company.
+Your value increases as your relationships deepen: I worked for my VP for many years, and in that time we both learned each others strengths and weaknesses. I could have a high-bandwidth conversation with him because I knew how he thought. Conversely, he knew what projects to assign me because he knew what I was good at. And of course, that meant that I had a higher chance to succeed and thus a higher chance to tackle larger and larger scopes.
+Help people to be successful and you will be successful: If you help your boss to succeed, then they will be more likely to promote you because you’ll be able to help even more if you have a larger scope. If you help your peers to succeed, then you will help your team succeed, which helps your boss succeed. If you help other teams succeed then their managers will support your boss when it comes time for a promotion. Success begets success, but only if you share it.
