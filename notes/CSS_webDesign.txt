@@ -1514,7 +1514,7 @@ Here we see the styling for a headling element that sits in the middle of the sc
         word-spacing: 4px;
     }
 
-The white text color is for contrast with the transparant black background on the image (see below on working with images). font-size is relative to the globally defined font-size, so will automatically update when the global value changes. Because it's quite a large font, we use font-weight to slim it down (we imorted this custom font weight from google fonts). To make it look nice we also transform the text to uppercase and give the letters and words some spacing.
+The white text color is for contrast with the transparant black background on the image (see below on working with images). font-size is relative to the globally defined font-size, so will automatically update when the global value changes. Because it's quite a large font, we use font-weight to slim it down (we imported this custom font weight from google fonts). To make it look nice we also transform the text to uppercase and give the letters and words some spacing.
 
 Sometimes we may have columns of identical information but one line may be inapplicable in one column. Say, for example, a p element has no content in one of the columns. Don't delete the p element. This could mess up the styling for the entire column and make the columns look different. Instead keep it there empty. However, it must have some actual content. Do this with a special entity (see HTML_notes.txt):
 
@@ -1544,6 +1544,9 @@ Because colours can convey emotion, carefully choose the right colors.
     - purple: power, nobility wisdom, luxury, mystery and wealth.
     - pink: romance, passivity, care, peace, affection, etc.
     - brown: relaxation, earthiness, nature, comfort, reliability and confidence. 
+
+
+Section Differentation:
 
 One nice trick is to use a very subtle background color in one section and leave surroundign sections with a white background.
 
