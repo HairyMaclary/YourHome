@@ -129,7 +129,7 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/sub_aerial.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/suburb.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -217,6 +217,23 @@ h3 {
 /* SERVICES SECTION */
 /* ----------------------------------------------- */
 
+.services {
+    background-color: #eff7ff; 
+    display: flex;
+    flex-direction: column;
+}
 
+.service-block {
+    display: flex;
+    flex-direction: row;
+}
 
+.service-block img {
+    flex-basis: 1;
+    max-width: 40%;
+    height: auto;
+}
 
+.service-block img {
+    flex-basis: 3
+}
