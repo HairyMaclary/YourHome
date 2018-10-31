@@ -1565,7 +1565,7 @@ Putting text directly on an image only works if the image is dark and the text i
 
 The most common solution is to overlay the image with a transparant color. Then place your text on the image. Black is the most common color but many options are available - use colors that make sense (see the section above). Color gradients are another option. Check out the course e-book. 
 
-The third option is to put some text in an opaque box somehwere in the image. Sometimes the box will be transparent. 
+The third option is to put some text in an opaque box somewhere in the image. Sometimes the box will be transparent. 
 
 Another option is image blur. Blur the background image and then apply your text.Similarly, you can use an out of focus area to apply the text. In this way you help bring focus on the important parts of the image. The trick, however, is too keep the text position over all screen sizes.
 
@@ -1588,7 +1588,7 @@ Here is an example of setting a full screen image within the header element hold
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/hero.jpg);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;  /* really cool! */
+        background-attachment: fixed; 
         height: 100vh;
     }
 
@@ -1994,10 +1994,6 @@ Some suggested styling might be green and red backgrounds:
     .error {
         background-color: rgba(209, 46, 46, 0.8);
     }
-
-
-
-
 
 
 
