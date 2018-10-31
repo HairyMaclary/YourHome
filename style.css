@@ -24,14 +24,59 @@ body {
     overflow-x: hidden;
 }
 
-
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+}
 
 /* ----------------------------------------------- */
 /* Reusable Components */
 /* ----------------------------------------------- */
 
+.section {
+    padding: 80px;
+    width: 70%;
+    margin: auto;
+}
+
+
+.section-header {
+
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #017eff;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ----- PARAGRAPHS ----- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
 
 /* ----- BUTTONS ----- */
+
+
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -63,17 +108,17 @@ input[type=submit] {
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #45a1ff;
+    background-color: #238fff;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #45a1ff;
+    border: 1px solid #238fff;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #45a1ff;
+    border: 1px solid #238fff;
     color: #fff;
 }
 
@@ -124,7 +169,7 @@ h3 {
     padding-bottom: 1.5em;
 }
 
-.flex-row {
+.flex-row-header {
     display: flex;
     width: 70%;
     margin: auto;
@@ -165,3 +210,13 @@ h3 {
 .main-nav li a:active {
     border-bottom: 2px solid #017eff;
 }
+
+
+
+/* ----------------------------------------------- */
+/* SERVICES SECTION */
+/* ----------------------------------------------- */
+
+
+
+

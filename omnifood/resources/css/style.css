@@ -53,6 +53,7 @@ section {
 }
 
 /* ----- HEADINGS ----- */
+
 h1,
 h2,
 h3 {
@@ -73,6 +74,7 @@ h2 {
     font-size: 180%;
     word-spacing: 2px;
     text-align: center;
+    padding-top: 30px;
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
@@ -91,6 +93,7 @@ h2:after {
     margin: 0 auto;
     margin-top: 30px;
 }
+
 
 /* ----- PARAGRAPHS ----- */
 .long-copy {
