@@ -25,6 +25,60 @@ body {
 }
 
 
+
+/* ----------------------------------------------- */
+/* Reusable Components */
+/* ----------------------------------------------- */
+
+
+/* ----- BUTTONS ----- */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #017eff;
+    border: 1px solid #017eff;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #017eff;
+    color: #017eff;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #45a1ff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #45a1ff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #45a1ff;
+    color: #fff;
+}
+
+
+
 /* ----------------------------------------------- */
 /* HEADER SECTION */
 /* ----------------------------------------------- */
@@ -58,6 +112,16 @@ h1 {
     text-indent: -2.5em;
     padding-bottom: 1.5em;
     line-height: 175%;
+}
+
+h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    padding-bottom: 1.5em;
 }
 
 .flex-row {
