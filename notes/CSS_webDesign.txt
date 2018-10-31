@@ -106,8 +106,8 @@ CSS Syntax
 A CSS rule-set (or just 'rule') consists of a selector and a declaration block. For example:
 
 h1 {
-    color:blue; 
-    font-size:12px;
+    color: blue; 
+    font-size: 12px;
 }
 
 Where h1 is the selector that points to the HTML element you want to style.
