@@ -41,11 +41,6 @@ body {
     margin: auto;
 }
 
-
-.section-header {
-
-}
-
 h2 {
     font-size: 180%;
     word-spacing: 2px;
@@ -224,16 +219,28 @@ h3 {
 }
 
 .service-block {
+    margin: 2.5em 0;
     display: flex;
     flex-direction: row;
+    
+}
+
+.service-block .image-container {
+    flex: 40%;
+    display: flex;
+    height: 150px;
 }
 
 .service-block img {
-    flex-basis: 1;
-    max-width: 40%;
-    height: auto;
+    margin-right: 1.5em;
+    width: 100%;
+    border-radius: 25%;
+    border: 2px #017eff solid;
+    align-self: center;
 }
 
-.service-block img {
-    flex-basis: 3
+.service-block p {
+    margin-left: 1.5em;
+    flex: 60%;
+    align-self: center;
 }
