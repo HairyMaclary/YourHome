@@ -41,11 +41,6 @@ body {
     margin: auto;
 }
 
-
-.section-header {
-
-}
-
 h2 {
     font-size: 180%;
     word-spacing: 2px;
@@ -224,16 +219,21 @@ h3 {
 }
 
 .service-block {
+    margin: 2.5em;
     display: flex;
     flex-direction: row;
 }
 
+.service-block .image-container {
+    flex: 40%;
+    height: 250px;
+}
 .service-block img {
-    flex-basis: 1;
-    max-width: 40%;
-    height: auto;
+    padding-right: 1.5em;
+    width: 100%;
+    border-radius: 25%;
 }
 
-.service-block img {
-    flex-basis: 3
+.service-block p {
+    flex: 60%;
 }
