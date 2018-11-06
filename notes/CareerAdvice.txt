@@ -10,6 +10,10 @@ Contribute to open source projects. Even little things like improving a sentence
 Network!!!! Go to tech meet ups, events, conferences. Actively participate in online tech communities such as SOF.
 
 
+Self taught engineers:
+
+Instead of trying to figure out what a self-taught programmer should study, the key is to be curious and deep dive into unfamiliar concepts whenever you face them. Eventually you will realize that self-taught and formally-educated programmers will always have something new to learn.
+
 
 
 

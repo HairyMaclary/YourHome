@@ -105,10 +105,10 @@ CSS Syntax
 
 A CSS rule-set (or just 'rule') consists of a selector and a declaration block. For example:
 
-h1 {
-    color: blue; 
-    font-size: 12px;
-}
+    h1 {
+        color: blue; 
+        font-size: 12px;
+    }
 
 Where h1 is the selector that points to the HTML element you want to style.
 
@@ -116,13 +116,13 @@ The declaration block contains one or more declarations separated by semicolons.
 
 The id selector allows the targeting of specific elements (use a # followed by the element's id):
 
-#para1 {
-    text-align: center;
-    color: red;
-}
+    #para1 {
+        text-align: center;
+        color: red;
+    }
 
-<p id="para1">Hello World!</p>
-<p>This paragraph is not affected by the style.</p>
+    <p id="para1">Hello World!</p>
+    <p>This paragraph is not affected by the style.</p>
 
 While ids are often used for specific elements (which is not often good practice), class attributes selectors allow us to group elements. In the next example two different elements types are both styled by the smae code:
 
