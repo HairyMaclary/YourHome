@@ -105,10 +105,10 @@ CSS Syntax
 
 A CSS rule-set (or just 'rule') consists of a selector and a declaration block. For example:
 
-h1 {
-    color: blue; 
-    font-size: 12px;
-}
+    h1 {
+        color: blue; 
+        font-size: 12px;
+    }
 
 Where h1 is the selector that points to the HTML element you want to style.
 
@@ -116,13 +116,13 @@ The declaration block contains one or more declarations separated by semicolons.
 
 The id selector allows the targeting of specific elements (use a # followed by the element's id):
 
-#para1 {
-    text-align: center;
-    color: red;
-}
+    #para1 {
+        text-align: center;
+        color: red;
+    }
 
-<p id="para1">Hello World!</p>
-<p>This paragraph is not affected by the style.</p>
+    <p id="para1">Hello World!</p>
+    <p>This paragraph is not affected by the style.</p>
 
 While ids are often used for specific elements (which is not often good practice), class attributes selectors allow us to group elements. In the next example two different elements types are both styled by the smae code:
 
@@ -1643,7 +1643,7 @@ In this example we make a grid of images with transitions on darkness and scale:
     }
 
 
-You can use text-align for all inine andinline block elements, eg icons and images.
+You can use text-align for all inine and inline block elements, eg icons and images.
 
 
 Working with Icons
@@ -1673,6 +1673,12 @@ Example:
 So, like text, we can change the color of the icon with just the color attribute. Similarly, we can also make them bigger/smaller with font-size. A block display is also useful in this case. Forcing a line break often gives icons the proper space if they are over a paragraph. 
 
 However in other cases you might have an icon sitting next to some text. You will also want to line the icon up with the text:
+
+
+    <div class="city-feature">
+        <i class="ion-ios-person icon-small"></i>
+        1600+ happy eaters
+    </div>
 
     .icon-small {
         display: inline-block; /* allows us to use the width property */

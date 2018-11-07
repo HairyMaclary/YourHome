@@ -207,13 +207,12 @@ h3 {
 }
 
 
-
 /* ----------------------------------------------- */
 /* SERVICES SECTION */
 /* ----------------------------------------------- */
 
 .services {
-    background-color: #eff7ff; 
+    background-color: #f4f4f4; 
     display: flex;
     flex-direction: column;
 }
@@ -221,26 +220,58 @@ h3 {
 .service-block {
     margin: 2.5em 0;
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row-reverse;
 }
 
 .service-block .image-container {
     flex: 40%;
     display: flex;
-    height: 150px;
+    height: 250px;
+    justify-content: center;
 }
 
 .service-block img {
     margin-right: 1.5em;
-    width: 100%;
+    height: 100%;
     border-radius: 25%;
     border: 2px #017eff solid;
     align-self: center;
 }
 
-.service-block p {
-    margin-left: 1.5em;
-    flex: 60%;
+.service-block .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-block .bullet {
+    margin-top: 1em;
+    display: flex;
     align-self: center;
 }
+
+.service-block>p {
+    align-self: center;
+    margin-bottom: 2em;
+}
+
+.service-block .bullet {
+    display: inline-block;
+}
+
+.service-block .bullet svg {
+    color: #017eff;
+    font-size: 0.8em;
+}
+
+.service-block .bullet p {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+
+/* ----------------------------------------------- */
+/* CONTACT SECTION */
+/* ----------------------------------------------- */
+
+
