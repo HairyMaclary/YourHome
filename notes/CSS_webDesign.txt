@@ -1643,7 +1643,7 @@ In this example we make a grid of images with transitions on darkness and scale:
     }
 
 
-You can use text-align for all inine andinline block elements, eg icons and images.
+You can use text-align for all inine and inline block elements, eg icons and images.
 
 
 Working with Icons
@@ -1673,6 +1673,12 @@ Example:
 So, like text, we can change the color of the icon with just the color attribute. Similarly, we can also make them bigger/smaller with font-size. A block display is also useful in this case. Forcing a line break often gives icons the proper space if they are over a paragraph. 
 
 However in other cases you might have an icon sitting next to some text. You will also want to line the icon up with the text:
+
+
+    <div class="city-feature">
+        <i class="ion-ios-person icon-small"></i>
+        1600+ happy eaters
+    </div>
 
     .icon-small {
         display: inline-block; /* allows us to use the width property */
