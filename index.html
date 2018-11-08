@@ -34,6 +34,33 @@
         </div>
     </header>
 
+    <section class="section section-testimonials">
+        <div class="section-header">
+            <h2>Our customers can't live without us</h2>
+        </div>
+                <blockquote>
+                    Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                    <cite><img src="resources/img/customer-1.jpg">Alberto Duncan</cite>
+                </blockquote>
+
+
+                <blockquote>
+                   Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+                    <cite><img src="resources/img/customer-2.jpg">Joana Silva</cite>
+                </blockquote>
+
+
+                <blockquote>
+I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
+                </blockquote>
+
+
+    </section>
+
+
+
+
     <section class="section services">
         <div class="section-header">
             <h2>A reasonable price &mdash; peace of mind</h2>
@@ -85,8 +112,9 @@
                     <p>Representing your interests</p>
                 </div>
             </div>
-            <div class="image-container"><img src="./img/lawBooks.jpg" alt="relax"></div>
+            <div class="image-container"><img src="./img/contractAndGlasses.jpg" alt="relax"></div>
         </div>
+
 
         <div class="service-block">
             <div class="image-container"><img src="./img/dollarSign.jpg" alt="relax"></div>
@@ -104,13 +132,41 @@
                     <i class="fas fa-check-double"></i>
                     <p>Multiple property discounts</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="section contact">
-        
+    <section class="section section-form">
+        <div class="section-header">
+            <h2>We're happy to hear from you</h2>
+            <p class="long-copy">Enter your details to arrange a quote or ask for more information.</p>
+        </div>
+        <div>
+            <form method="post" action="#" class="contact-form">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+
+                <label for="phone">Phone*</label>
+                <input type="phone" name="phone" id="phone" placeholder="Your phone" required>
+                
+                <label for="find-us">How did you find us?</label>
+                <select name="find-us" id="find-us">
+                    <option value="friends" selected>Friends</option>
+                    <option value="search">Search engine</option>
+                    <option value="ad">Advertisement</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label>Drop us a line</label>
+                <textarea name="message" placeholder="Your message"></textarea>
+
+                <label>&nbsp;</label>
+                <input type="submit" value="Send it!">
+            </form>
+        </div>
     </section>
 
 </body>

@@ -67,6 +67,7 @@ h2:after {
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
+    text-align: center;
 }
 
 /* ----- BUTTONS ----- */
@@ -274,4 +275,35 @@ h3 {
 /* CONTACT SECTION */
 /* ----------------------------------------------- */
 
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+}
 
+label {
+    line-height: 150%;
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 2em;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/*:focus {outline: none;} */
