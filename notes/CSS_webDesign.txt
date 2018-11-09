@@ -1848,7 +1848,7 @@ There is an example of responsive design in the nav bar example section.
 Quotes
 ---------------------------------------
 
-Example of image (profile pic) next to the quote:
+Example of image (profile pic) next to the quote: (random profile pics are available from https://randomuser.me/)
 
     <blockquote>
         Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!

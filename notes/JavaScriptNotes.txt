@@ -6777,7 +6777,7 @@ Another useful plugin for tooltips is at http://iamceege.github.io/tooltipster/ 
 
 Maplace.js helps you to imbed google maps into your website. 
 
-Some other fun plug-ins include Typer.js, which can make it look like text in your page is being edited. zThis means you can have multiple messages in one line. onepage_scroll has each section fill one view port height. This can help you make presentation style websites. 
+Some other fun plug-ins include Typer.js, which can make it look like text in your page is being edited. This means you can have multiple messages in one line. onepage_scroll has each section fill one view port height. This can help you make presentation style websites. 
 
 
 Basic syntax is: $(selector).action()
