@@ -225,38 +225,66 @@ h3 {
 }
 
 .service-block .image-container {
-    flex: 40%;
+    flex: 1;
     display: flex;
     height: 250px;
-    justify-content: center;
+    justify-content: left;
+
+    overflow: hidden;  
+
 }
 
-.service-block img {
+.service-block:nth-child(3) .image-container {
+    justify-content: flex-end;
+}
+
+.service-block .image-container img {
     margin-right: 1.5em;
     height: 100%;
-    border-radius: 25%;
-    border: 2px #017eff solid;
-    align-self: center;
+    border-radius: 4%;
+    border: 1px #555 solid;
+    
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+    background-color: black;
+}
+
+.service-block .image-container img:hover {
+   border: none;
+   border-radius: 0%;
+   opacity: 1;
+   transform: scale(1.03); 
 }
 
 .service-block .text-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: right;
+    margin-right: 1.5em;
+}
+
+.service-block .text-container:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 0;
+}
+
+.service-block>.text-container>p {
+    width: 75%; /* limits the characters per line but ruins centering*/
+    align-self: flex-end;
+}
+
+.service-block .text-container:nth-of-type(1) p {
+    width: 75%; /* limits the characters per line but ruins centering*/
+    align-self: flex-start;
 }
 
 .service-block .bullet {
     margin-top: 1em;
     display: flex;
-    align-self: center;
-}
-
-.service-block>p {
-    align-self: center;
-    margin-bottom: 2em;
-}
-
-.service-block .bullet {
     display: inline-block;
 }
 
