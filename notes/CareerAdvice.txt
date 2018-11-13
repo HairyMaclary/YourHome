@@ -50,6 +50,27 @@ Last but not the least -Using Mac OSX makes a better programmer
 
 
 
+
+What are the characteristics of a bad software engineer?
+
+They are what I call the trigger happy programmers/engineers.
+
+Give them a problem, they start coding immediately. They continue down the very first chain of thought and slog their way to a “working” solution. No deliberation to think clearly about the problem, evaluate multiple solutions, think about design etc.
+
+Ask them how will you test your solution, their answer: run the program and eyeball the result. That's it.
+
+Ask them how you troubleshoot, their answer: with print statements.
+
+Give them a problem and ask for an estimate, within 30 seconds they will say X days. No methodology involved. Just an “intelligent” guess.
+
+Ask them about reusability, their solution is to copy-paste similar looking code across projects.
+
+These guys are not just bad, they are indifferent and irresponsible. They unfortunately shine in the eyes of non-technical members of your organization because they often code and churn out solution at faster rate. They do not say NO to any feature. They do not ask for time to research. They do not care about learning new technologies. They leave tremendous technical debt.
+
+
+
+
+
 Testing:
 
 
