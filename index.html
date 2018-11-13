@@ -8,8 +8,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
-    <script rel="stylesheet" type="text/css" src="vendors/animate.css"></script>
-    <script src="vendors/waypoints/lib/jquery.waypoints.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendors/animate.css" />
+    <script src="vendors/jquery.waypoints.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -23,29 +23,30 @@
         <nav>
             <div class="flex-row-header">
                 <img src="./img/logo-white.png" alt="Your House logo" class="logo">
+                <img src="./img/logo-black.png" alt="Your House logo" class="logo-black">
                 <ul class="main-nav">
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
         </nav>
         <div class="header-text-box">
             <h1>Goodbye worries...<br>Hello good life!</h1>
             <h3>Value for money property management</h3>
-            <a class="btn btn-full js--scroll-to-contact" href="#">Easy Quote</a>
+            <a class="btn btn-full js--scroll-to-contact js--wp0" href="#">Easy Quote</a>
             <a class="btn btn-ghost js--scroll-to-services" href="#">Show me more</a>
         </div>
     </header>
 
-    <section class="section section-testimonials wp1">
+    <section class="section section-testimonials js--section-testimonials js--wp1">
                 <blockquote>
                     Your Property has been absolutlely great. Work is done on time and tennants are well managed. All around great value.
                     <cite><img src="./img/barbara.jpg">Barbara - Dunedin</cite>
                 </blockquote>
     </section>
 
-    <section class="section services">
+    <section class="section services js--section-services" id="services">
         <div class="section-header">
             <h2>A reasonable price &mdash; peace of mind</h2>
             <p class="long-copy">
@@ -120,7 +121,7 @@
         </div>
     </section>
 
-    <section class="section section-form">
+    <section class="section section-form js--section-form" id="contact">
         <div class="section-header">
             <h2>We're happy to hear from you</h2>
             <p class="long-copy">Enter your details to arrange a quote or ask for more information.</p>
@@ -152,6 +153,19 @@
             </form>
         </div>
     </section>
+
+    <section class="section about js--section-about" id="about">
+        <div class="section-header">
+            <h2>About Your Property</h2>
+            <p class="long-copy">Your property is the brain child of J. Kadoddlehopper.
+                 After working in property management for some time he realised that investors
+                are paying too much for quality property management.</p>
+        </div>
+        <div>
+
+        </div>
+    </section>
+
 
 </body>
 
