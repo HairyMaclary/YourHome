@@ -1696,7 +1696,6 @@ However in other cases you might have an icon sitting next to some text. You wil
 
 
 
-
 Whitespace
 --------------------------------------
 
