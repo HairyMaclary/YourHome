@@ -38,19 +38,36 @@ $(document).ready(function () {
 
 
     /* ANIMATION ON SCROLL */
-    $('.js--wp1').waypoint(function (direction) {
-        $('.js--wp1').addClass('animated fadeInRight');
-    }, {
-            offset: '55%'
-    });
-
 
     $('.js--wp0').waypoint(function (direction) {
         $('.js--wp0').addClass('animated pulse');
     }, {
             offset: '0%'
     });
+    
+    $('.js--wp1').waypoint(function (direction) {
+        $('.js--wp1').addClass('animated fadeInRight');
+    }, {
+            offset: '55%'
+    });
 
+    $('.js--wp2').waypoint(function (direction) {
+        $('.js--wp2').addClass('animated pulse');
+    }, {
+            offset: '55%'
+    });
+
+    $('.js--wp4').waypoint(function (direction) {
+        $('.js--wp4').addClass('animated rubberBand');
+    }, {
+            offset: '85%'
+    });
+
+    $('.js--wp5').waypoint(function (direction) {
+        $('.js--wp5').addClass('animated wobble');
+    }, {
+            offset: '85%'
+    });
 
     /* NAV ANIMATION  */
 

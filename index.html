@@ -12,6 +12,8 @@
     <script src="vendors/jquery.waypoints.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 
@@ -40,10 +42,11 @@
     </header>
 
     <section class="section section-testimonials js--section-testimonials js--wp1">
-                <blockquote>
-                    Your Property has been absolutlely great. Work is done on time and tennants are well managed. All around great value.
-                    <cite><img src="./img/barbara.jpg">Barbara - Dunedin</cite>
-                </blockquote>
+        <blockquote>
+            Your Property has been absolutlely great. Work is done on time and tennants are well managed. All around
+            great value.
+            <cite><img src="./img/barbara.jpg">Barbara - Dunedin</cite>
+        </blockquote>
     </section>
 
     <section class="section services js--section-services" id="services">
@@ -58,7 +61,6 @@
         </div>
 
         <div class="service-block">
-            <div class="image-container"><img src="./img/relax1.jpg" alt="relax"></div>
             <div class="text-container">
                 <p>We know you're busy. Let us take care of the details so you can do more (or less).</p>
                 <div class="bullet">
@@ -78,9 +80,11 @@
                     <p>Three-monthly inspections</p>
                 </div>
             </div>
+            <div class="image-container"><img src="./img/relax1.jpg" alt="relax"></div>
         </div>
 
         <div class="service-block">
+            <div class="image-container"><img src="./img/contractAndGlasses.jpg" alt="relax"></div>
             <div class="text-container">
                 <p>Finding great tennants is always the best way to have a hassle free journey.
                     However if things go wrong then having an experienced manager can save you money and grief.</p>
@@ -97,12 +101,10 @@
                     <p>Representing your interests</p>
                 </div>
             </div>
-            <div class="image-container"><img src="./img/contractAndGlasses.jpg" alt="relax"></div>
         </div>
 
 
         <div class="service-block">
-            <div class="image-container"><img src="./img/dollarSign.jpg" alt="relax"></div>
             <div class="text-container">
                 <p>Great property management shouldn't cost the earth.</p>
                 <div class="bullet">
@@ -118,7 +120,9 @@
                     <p>Multiple property discounts</p>
                 </div>
             </div>
+            <div class="image-container"><img src="./img/dollarSign.jpg" alt="relax"></div>
         </div>
+        
     </section>
 
     <section class="section section-form js--section-form" id="contact">
@@ -136,7 +140,7 @@
 
                 <label for="phone">Phone*</label>
                 <input type="phone" name="phone" id="phone" placeholder="Your phone" required>
-                
+
                 <label for="find-us">How did you find us?</label>
                 <select name="find-us" id="find-us">
                     <option value="friends" selected>Friends</option>
@@ -149,7 +153,7 @@
                 <textarea name="message" placeholder="Your message"></textarea>
 
                 <label>&nbsp;</label>
-                <input type="submit" value="Send it!">
+                <input class="js--wp4" type="submit" value="Send it!">
             </form>
         </div>
     </section>
@@ -158,14 +162,34 @@
         <div class="section-header">
             <h2>About Your Property</h2>
             <p class="long-copy">Your property is the brain child of J. Kadoddlehopper.
-                 After working in property management for some time he realised that investors
+                After working in property management for some time he realised that investors
                 are paying too much for quality property management.</p>
         </div>
-        <div>
-
+        <div class="about-image-container">
+            <img class="js--wp2" src="./img/businessMan.jpg" alt="J-Kadoodlehopper">
+        </div>
+        <div class="call-button js--wp5">
+                <a class="btn btn-full" href="tel:5551234567">021 555 5555</a>
         </div>
     </section>
 
+    <footer>
+        <div class="social-links">
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-info">
+            <p>
+                Built with <i class="fas fa-heart" style="color: #ea0000; padding: 0 3px;"></i> in the beautiful city
+                of Dunedin, NZ. &copy; 2019.
+            </p>
+        </div>
+    </footer>
 
 </body>
 
