@@ -370,13 +370,13 @@ cite img {
 }
 
 .service-block>.text-container>p {
-    width: 75%; /* limits the characters per line but ruins centering*/
+    width: 90%; /* limits the characters per line but ruins centering*/
     align-self: flex-end;
     text-align: right;
 }
 
 .service-block>.text-container>.bullet {
-    width: 75%; /* limits the characters per line but ruins centering*/
+    width: 90%; /* limits the characters per line but ruins centering*/
     align-self: flex-end;
     text-align: right;
 }
@@ -425,7 +425,7 @@ label {
 
 input[type=text],
 input[type=email],
-input[type=phone],
+input[type=tel],
 select,
 textarea {
     width: 100%;

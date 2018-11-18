@@ -1,8 +1,23 @@
 /* Big tablet to 1200px (widths smaller than the 1140px row used in our project) */
 @media only screen and (max-width: 1200px) {
+    
+    .section {
+        padding: 60px;
+    }
+    
+    .section-testimonials {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+
+    blockquote {
+        margin: 0px;
+    }
+    
     .service-block {
         flex-direction: column;
-        margin-top: 1.5em;
+        margin-top: 2.5em;
+        margin-bottom: 0;
     }
 
     .service-block .image-container {
@@ -21,9 +36,13 @@
         margin: auto 0;
     }
 
-    .service-block .text-container p,
+    .service-block:nth-child(3) .text-container {
+        margin-left: 0;
+    }
+
+    .service-block .text-container>p,
     .service-block .text-container .bullet,
-    .service-block:nth-child(3) .text-container p,
+    .service-block:nth-child(3) .text-container>p,
     .service-block:nth-child(3) .text-container .bullet {
         width: 80%;
         align-self: center;
@@ -33,58 +52,43 @@
     .service-block .text-container .bullet {
         display: flex;
         justify-content: center;
+        line-height: 80%;
     }
+
+    .about-image-container {
+        height: 300px;
+    }
+
 }
 
 
-/* Small tablet to big tablet: from 768px to 1023px
+/* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
     body { font-size: 18px; }
-    section { padding: 60px 0; }
+
+    .section { 
+        padding: 60px 0;
+        width: 90%;
+    }
     
     .long-copy {
-        width: 80%;
-        margin-left: 10%;
-    }
-    
-    .steps-box { margin-top: 10px; }
-    .steps-box:last-child { margin-top: 10px; }
-    .works-steps { margin-bottom: 40px; }
-    .works-step:last-of-type { margin-bottom: 60px; }
-    
-    .app-screen { width: 50%; }
-    
-    .icon-small { 
-        width: 17px;
-        margin-right: 5px;
-    }
-    
-    .city-feature { font-size: 90%; }
-    
-    .plan-box {
         width: 100%;
-        margin-left: 0%;
+        margin-left: 0;
     }
-    
-    .plan-price { font-size: 250%; }
-    .contact-form { width: 80%; }
+
+    blockquote {
+        text-align: center;
+    }
 }
 
 
 
-/* Small phones to small tablets: from 481px to 767px
+/* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
-    section { padding: 30px 0; }
+    section { padding: 20px 3%; }
     
-    .row,
-    .hero-text-box { padding: 0 4%; }
-    .col { 
-        width: 100%;
-        margin: 0 0 4% 0;
-    }
-    
-    
+    /*
     .main-nav { display: none; }
     .mobile-nav-icon {display: inline-block;}
     
@@ -106,36 +110,43 @@
         font-size: 100%;
     }
     
-    .sticky .main-nav { margin-top: 10px; }
+    */
+    .sticky .main-nav { 
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     .sticky .main-nav li a:link,
-    .sticky .main-nav li a:visited { padding: 10px 0; }
-    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .main-nav li a:visited { padding: 0; }
+    .sticky .mobile-nav-icon { margin-top: 5px; }
     .sticky .mobile-nav-icon i { color: #555; }
+    .sticky ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     
-    
-    
-    h1 { font-size: 180%; }
+    h1 { font-size: 120%; }
     h2 { font-size: 150%; }
+    h3 { font-size: 120%; }
+
+    .header-text-box {
+        margin-top: 20px;
+    }
     
-    .long-copy {
+    p.long-copy {
         width: 100%;
+        padding: 10px;
         margin-left: 0%;
     }
     
     .app-screen { width: 40%; }
-    .steps-box:first-child { text-align: center; }
-    
-    .works-step div {
-        height: 40px;
-        width: 40px;
-        margin-right: 15px;
-        padding: 4px;
-        font-size: 120%;
+
+    .service-block .image-container {
+        margin-bottom: 0;
+        height: 175px;
     }
-    
-    .works-step { margin-bottom: 20px; }
-    .works-step:last-of-type { margin-bottom: 20px; }
+
     
 }
 
