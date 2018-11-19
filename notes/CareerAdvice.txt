@@ -82,6 +82,19 @@ The second I hear something that even smells like "that's not worth my time" is 
 
 
 
+Soft skills are just as important as technical skills:
+
+The sad fact is that we can train a monkey to do technical work, but you can’t train one to pay attention to details, listen to your clients, put their needs first, sense of responsibility, and many other soft skills that are significantly more important for any organization to succeed.
+
+Here are a couple of examples of questions that you may expect from someone like me:
+
+“we have recently rolled out an in-house accounting software that accounting team heavily complaints about. How would you go about fixing it?”
+Your answer better start with “I’ll go to the client and investigate what is not working for them, then review, categorize, prioritize those needs…”
+
+“You are implementing an upgrade of your system, combined with new hardware, new IP addresses, DB upgrade and operating system upgrade. After bringing everything online, the users are not able to access the system. Where do you start your analysis?”
+Unless the answer is “why would you do all of that at the same time?” you will probably fail to convince me that you know much about complex systems…
+
+
 Testing:
 
 

@@ -80,18 +80,21 @@
     blockquote {
         text-align: center;
     }
+
+    .app-screen { width: 50%; }
 }
 
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
-    section { padding: 20px 3%; }
+    .section { padding: 20px 3%; }
     
     /*
     .main-nav { display: none; }
     .mobile-nav-icon {display: inline-block;}
-    
+        */
+
     .main-nav {
         float: left;
         margin-top: 30px;
@@ -110,7 +113,6 @@
         font-size: 100%;
     }
     
-    */
     .sticky .main-nav { 
         margin-top: 5px;
         margin-bottom: 5px;
@@ -127,8 +129,19 @@
     }
     
     h1 { font-size: 120%; }
-    h2 { font-size: 150%; }
+
+    h2 { 
+        font-size: 150%;
+        margin-bottom: 10px;
+    }
+
+    h2::after { 
+        font-size: 150%;
+        margin-top: 20px;
+    }
+
     h3 { font-size: 120%; }
+
 
     .header-text-box {
         margin-top: 20px;
@@ -142,13 +155,23 @@
     
     .app-screen { width: 40%; }
 
+    blockquote::before {
+        font-size: 300%;
+        top: 5px;
+        position: relative;
+    }
+
+    #services > div:nth-child(2) {
+        margin-top: 20px;
+    }
+
     .service-block .image-container {
         margin-bottom: 0;
-        height: 175px;
+        height: 150px;
     }
 
     .about-image-container {
-        height: 200px;
+        height: 175px;
     }
     
 }

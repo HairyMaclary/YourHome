@@ -9,6 +9,7 @@ CSS and Web Design
 - Intro and Box Rendering Objects
 - CSS Syntax
 - How to use a Style Sheet
+- Specificity
 - Position
 - Display
 - Border
@@ -270,6 +271,39 @@ We can assign all common CSS property values to a .btn {} rule and then supply s
         color: #e67e22;
     }
 
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+    - descendant selector (space)
+    - child selector (>)
+    - adjacent sibling selector (+)
+    - general sibling selector (~)
+
+For example the following selects all p that are inside div elements:
+
+    div p {
+        background-color: yellow;
+    }
+
+Where as this selects all p that are immediate chilren of a div:
+
+    div > p {
+        background-color: yellow;
+    }
+
+And if we wanted to select all p that are siblings of divs:
+
+    div ~ p {
+        background-color: yellow;
+    }
+
+Or all p that are placed directly after a div (both with same parent):
+
+    div + p {
+        background-color: yellow;
+    }
+
 A CSS comment starts with /* and ends with */. Comments can also span multiple lines
 
 
@@ -349,6 +383,22 @@ Our own script.js file should always be the last one. That's because of the depe
 
 
 
+Specificity
+-------------------------------------------------
+
+Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, directly targeted elements will always take precedence over rules which an element inherits from its ancestor.
+
+The following list of selector types increases by specificity:
+
+    - Type selectors (e.g., h1) and pseudo-elements (e.g., ::before).
+    - Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+    - ID selectors (e.g., #example).
+
+Universal selector (*), combinators (+, >, ~, ' ') and negation pseudo-class (:not()) have no effect on specificity. (The selectors declared inside :not() do, however.)
+
+Inline styles added to an element (e.g., style="font-weight:bold") always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.
+
+When an important rule is used on a style declaration, this declaration overrides any other declarations. Using !important, however, is bad practice and should be avoided because it makes debugging more difficult by breaking the natural cascading in your stylesheets.
 
 
 Position
