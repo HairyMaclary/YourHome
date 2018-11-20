@@ -6,6 +6,10 @@
         padding: 60px;
     }
     
+    .btn.btn-ghost {
+        font-weight: 400;
+    }
+
     .section-testimonials {
         padding-top: 70px;
         padding-bottom: 30px;
@@ -176,13 +180,78 @@
     
 }
 
-
-
-
-/* Small phones: from 0 to 480px 
+/* Small phones: from 0 to 480px*/ 
 @media only screen and (max-width: 480px) {
-    section { padding: 25px 0; }
-    .contact-form {width: 100%; }
+    .section { padding: 15px 0; }
+    
+    nav {
+        font-size: 12px;
+        height: 80px;
+    }
+
+    .flex-row-header {
+        width: 95%;
+        height: 100%;
+    }
+
+    .flex-row-header img {
+        margin-top: 5px;
+        height: 100%;
+    }
+
+    .main-nav {
+        margin-top: 5px;
+        height: 100%;
+    }
+
+    .main-nav li {
+        height: 40%;
+    }
+
+    h1 {
+        font-size: 100%;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 100%;
+    }
+
+    .header-button-container {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        height: 140px;
+        width: 120%;
+    }
+
+    .header-button-container .btn {
+        height: 40%;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-button-container .btn a{
+        height: auto;
+        width: auto;
+        vertical-align: center;
+    }
+
+    .btn.btn-full {
+        margin-bottom: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #label-space {
+        display: none;
+    }
+
+    .about-image-container {
+        margin: 16px 0;
+    }
 } 
 
-*/
+
