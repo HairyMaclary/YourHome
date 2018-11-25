@@ -43,51 +43,51 @@ $(document).ready(function () {
         $('.js--wp0').addClass('animated pulse');
     }, {
             offset: '0%'
-    });
-    
+        });
+
     $('.js--wp1').waypoint(function (direction) {
         $('.js--wp1').addClass('animated fadeInRight');
     }, {
             offset: '55%'
-    });
+        });
 
     $('.js--wp2').waypoint(function (direction) {
         $('.js--wp2').addClass('animated pulse');
     }, {
             offset: '55%'
-    });
+        });
 
     $('.js--wp4').waypoint(function (direction) {
         $('.js--wp4').addClass('animated rubberBand');
     }, {
             offset: '85%'
-    });
+        });
 
     $('.js--wp5').waypoint(function (direction) {
         $('.js--wp5').addClass('animated wobble');
     }, {
             offset: '85%'
+        });
+
+    /* NAV ANIMATION */
+
+    $('.js--nav-icon').click(function () {
+
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon svg');
+
+        nav.slideToggle(200);
+
+        if (icon.hasClass('fa-bars')) {
+            icon.addClass('fa-times');
+            icon.removeClass('fa-bars');
+
+        } else {
+            icon.addClass('fa-bars');
+            icon.removeClass('fa-times');
+        }
     });
-
-    /* NAV ANIMATION  */
-
-    //   $('.js--nav-icon').click(function() {
-    //           var nav = $('.js--main-nav');
-    //           var icon = $('.js--nav-icon i');
-
-    //           nav.slideToggle(200);
-
-    //           if(icon.hasClass('ion-navicon-round')) {
-    //               icon.addClass('ion-close-round');
-    //               icon.removeClass('ion-navicon-round');
-    //           } else {
-    //               icon.addClass('ion-navicon-round');
-    //               icon.removeClass('ion-close-round');
-    //           }
-
-    //   });
-
-    // });
-
-
 });
+
+
+

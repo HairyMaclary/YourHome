@@ -23,6 +23,7 @@ CSS and Web Design
 - px vs %
 - Links
 - Flexbox
+- CSS Grid
 - NavBar example
 - Toolbar Example
 - Side Draw Example
@@ -98,11 +99,19 @@ At the start of a project it may be useful to just clean out all default margins
 (font-weight: 300; is available since it's one of the customise font weights we choose at google fonts)
 (text-rendering: optimizeLegibility; makes the text rendering a lot smoother).
 
+To use a google font you can either insert a link element into your header or use an import statement at the top of your style sheet:
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+or
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 
 
 CSS Syntax
 ------------------------------------------------
-
 
 A CSS rule-set (or just 'rule') consists of a selector and a declaration block. For example:
 
@@ -125,7 +134,7 @@ The id selector allows the targeting of specific elements (use a # followed by t
     <p id="para1">Hello World!</p>
     <p>This paragraph is not affected by the style.</p>
 
-While ids are often used for specific elements (which is not often good practice), class attributes selectors allow us to group elements. In the next example two different elements types are both styled by the smae code:
+While ids are often used for specific elements (which is not often good practice), class attribute selectors allow us to group elements. In the next example two different elements types are both styled by the same code:
 
     .center {
         text-align: center;
@@ -306,6 +315,18 @@ Or all p that are placed directly after a div (both with same parent):
 
 A CSS comment starts with /* and ends with */. Comments can also span multiple lines
 
+One useful way to choose class names is the BEM Methodology; block, element, modifier. For example I might have a figure as a block, and it has a hero picture element. Two underscores are used in the element to extend the block name. If one element is different from elements of the same class then we use a double hyphen to indicate it is modified:
+
+            <figure class="pizza">
+                <div class="pizza__hero"></div>
+                <div class="pizza__hero--type1"></div>
+                <div class="pizza__hero"></div>
+                <div class="pizza__img"></div>
+                <div class="pizza__content"></div>
+            </figure>
+
+
+
 
 
 How to use a Style Sheet
@@ -462,8 +483,6 @@ top examples:
 
 - top: auto;  The element will remain in its natural position (default).
 - top: 20px;   If the element is in position relative, the element will move downwards by the amount defined by the top value. If the element is in position absolute, the element will position itself from the top of the first positioned ancestor.
-
-
 
 
 
@@ -846,23 +865,69 @@ Links
 Flexbox
 --------------------------------------------------
 
-
-see "Flexbox Tutorial (CSS): Real Layout Examples" in youtube.
-
-
-The CSS rule for the parent div should include 
+There are 10 flexbox properties. There are 5 container/parent properties and 5 child properties. However you must first declare the parent as a flex container:
 
 	display: flex;
 
+All of the container's direct children are now flex-items. 
 
-Then, if you want a child element to have a share of all the remaining space, it should have a relative sharing ratio. If all elements are to equally share the main container then each would have 
 
-	flex: 1;
+A flex container has these properties (default in brackets):
 
-If there were three elements and one was to take up half of the main container then the dominant element would have flex: 2;  while the remaining two would have flex:1;
+flex-direction (row), flex-wrap (no-wrap), justify-content (flex-start), align-items (stretch), align-content (stretch).
 
-If we had two elements, but we only wanted one to expand and fill the remaining space, the this larger element would use flex:1 while its sibling would stay quiet on flex value. It will get its normal auto size.
+Within a container there are two perpendicular axes. The main axis and the cross axis. We can align items on both of these axes. The main axis is set by the flex-direction property. So in the default case (flex-direction: row;) the main axis goes from left to right across the container. 
 
+The align items property is then used to organise items in relation the cross axis. For example if the cross axis was vertical, then align-items: center; would vertically center the items. They line up accross the center of the vertical axis.
+
+The justify content property is used to align items on the main axis. 
+
+So to easily center an element include this in the parent:
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+Also, if an element only contains inner text then you can still use this in the element to center that text.
+
+The child properties are: 
+
+align-self (auto), order, flex-grow (0), flex-shrink (1), and flex basis (auto).
+
+In addition to the two axes, another important flex concept is start and end. For example in the default row direction flex-start is on the left while flex-end is on the right. If the flex-direction was row-reverse, then flex-end and flex-start would be reversed. 
+
+So in the default case (flex-direction of row) all flex-items (direct children) behave in this way:
+
+    - Items display in a row from the left to the right edge
+    - The items do not stretch on the main dimension, but can shrink to squeeze in (dependant on width of text, etc)
+    - The items will stretch to fill the size of the cross axis.
+    - The flex-basis property is set to auto. Each item only takes a the minimum about of width on the main axes. When the total minimum across all items is less that that of the container, there will be white space on the right of the container.
+    - The flex-wrap property is set to nowrap. If items cannot shrink enough to fit on the main axis then no new main axis (essentially a new container) will be created. Instead overflow will happen.
+
+The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the cross axis to fill its full size.
+
+Flex-grow, flex-shrink , and flex basis can be combined into one 'flex' property, that then has three default arguments:
+
+    flex: 0 1 auto;
+
+The last, flex basis, is where we define the width of the item before the remaining space is distributed via flex-grow. The default, auto, only use the bare minimum along the main axis. If the item dosn’t have a set width/height then the inner content's size is used as the flex-basis. 
+
+If we want an item to use 45% of the available space in the main direction:
+
+    flex: 0 1 45%;   /* aka flex-basis: 45%; */
+
+We can then begin assigning remaining space with flex-grow. If only one element has a flex grow value it will fill the remianing space. Given the previous example, we give 45% of the space, we just set it's neighbour to flex-grow.
+
+    flex: 1;  /* aka flex-grow: 1; */
+
+If more than one item has a flex-grow value the remaining space is filled alloted in the ratio of their flex-grow values.
+
+If we do not have enough space in the container to lay out our items and flex-shrink is set to a positive integer the item can become smaller than the flex-basis. As with flex-grow different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for flex-shrink will shrink faster than its siblings that have lower values.
+
+
+For one particular child element, you can override a parent property like align-items with align-self.
+
+align-content is useful for cases of multiple main axes (wrapping). This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. This property has no effect when there is only one line of flex items.
 
 
 Order:
@@ -931,26 +996,25 @@ Margins:
 
 In non-flex CSS we could just target individual margins for each child element. However, there is a flex approach. In the child CSS rule change flex: 1 to a wdith percentage (note if you assign both padding and width CSS values ,then you should also use box-sizing: border-box so that the math stays as simple as possible):
 
-
-.call-out {
-	padding: 20px;
-	box-sizing: border-box;
-	margin-bottom: 20px;
-	width: 30%   
-}
+    .call-out {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        width: 30%   
+    }
 
 (An alternative to width, and really the proper flexbox way, is to use flex-basis: 30%)
 
 Since there are 3 elements we now have used 90% of the available space. This leaves 10% to evenly divide up as margins. We do this by targeting the parent element with a justify content value:
 
-.call-outs-container {
-	max-width: 1400px;
-	margin: 40px auto 0 auto;
-	display: flex;
-	justify-content: space-between;
-}
+    .call-outs-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
 
-The default value for justify-content is start. This will psuh all three children to the left and leave the 10% at the end, or right. Using 'end' as a value will move the three elements to the right, and consequently leave the 10% of background color on the left, or start. The value "center" will align the content in the midle of the parent container, leaving 5% background on each side.
+The default value for justify-content is start. This will push all three children to the left and leave the 10% at the end, or right. Using 'end' as a value will move the three elements to the right, and consequently leave the 10% of background color on the left, or start. The value "center" will align the content in the midle of the parent container, leaving 5% background on each side.
 
 
 
@@ -1071,6 +1135,14 @@ We can make child containers flex containers as well:
 By default flex-direction is set to row.
 
 So now we have two children side by side, and then two grandchildren, on the right hand side, with one on top of the other. We have made a nice mixture of rows and columns.
+
+
+
+CSS Grid
+--------------------------------------------
+
+You can use this to layout elements in a 2 dimensional grid. 
+
 
 
 
@@ -1611,7 +1683,10 @@ Image heavy web sites convert better. Here we learn how to put text over images.
 
 Putting text directly on an image only works if the image is dark and the text is light. Otherwise you do not have enough contrast between the text and the image. 
 
-The most common solution is to overlay the image with a transparant color. Then place your text on the image. Black is the most common color but many options are available - use colors that make sense (see the section above). Color gradients are another option. Check out the course e-book. 
+The most common solution is to overlay the image with a transparant color. Then place your text on the image. Black is the most common color but many options are available - use colors that make sense (see the section above). Color gradients are another option. Check out the course e-book. One is example is a gradient that moves in a horizontal direction:
+
+    background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+    height: 100vh;  /* need this so the background image does repeat */
 
 The third option is to put some text in an opaque box somewhere in the image. Sometimes the box will be transparent. 
 
