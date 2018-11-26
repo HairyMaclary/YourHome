@@ -158,7 +158,7 @@ JavaScript statements are composed of Values, Operators, Expressions, Keywords, 
         a == b;         // true
         a === b;        // false
     
-    In the a == b 'equality' comparison, JS notices that the types do not match, so it first goes through an ordered series of steps to coerce one or both values to a different type until the types match, where then a simple value equality can be checked. The a === b 'strict equality' produces false because coercion is not allowed. So the simple value comparison obviously fails. Use strict equality and inequality (!==) be default in your code.
+    In the a == b 'equality' comparison, JS notices that the types do not match, so it first goes through an ordered series of steps to coerce one or both values to a different type until the types match, where then a simple value equality can be checked. The a === b 'strict equality' produces false because coercion is not allowed. So the simple value comparison obviously fails. Use strict equality and inequality (!==) by default in your code.
 
     So using '==' can lead to hard to detect coercion related bugs:
 
@@ -190,8 +190,7 @@ JavaScript statements are composed of Values, Operators, Expressions, Keywords, 
     But JavaScript string values can also be compared for inequality, using typical alphabetic rules ("bar" < "foo").
 
     What about coercion? (there is full coercion section below) Similar rules as == comparison (though not exactly identical!) apply to the inequality operators. Notably, there are no "strict inequality" operators that would disallow coercion the same way === "strict equality" does.
-    
-    
+        
         var a = 41;
         var b = "42";
         var c = "43";
@@ -212,7 +211,7 @@ JavaScript statements are composed of Values, Operators, Expressions, Keywords, 
     
     Wait, how can all three of those comparisons be false? Because the b value is being coerced to the "invalid number value" NaN in the < and > comparisons, and the specification says that NaN is neither greater-than nor less-than any other value (see more on NaN below).
     
-    Operator precedence and assoicativity help to explain this unusual result:    
+    Operator prescedence and assoicativity help to explain this unusual result:    
 
     cons0le.log(3 < 2 < 1)  // true
 
@@ -248,8 +247,7 @@ JavaScript statements are composed of Values, Operators, Expressions, Keywords, 
 
 5A. Since ECMA6 'var' is usually replaced with 'const' or 'let'. Variables declared with var are scoped to a function , not to a block. By comparison let variables are only scoped to their block (ie between {...}). Variables created without the keyword var, are always global, even if they are created inside a function. See the scope section.
 
-Second, var declared variables can de re-declared. let will throw an exception when a variable is re-declared in the same scope. So let helps avopid naming collisions. 
-
+Second, var declared variables can de re-declared. let will throw an exception when a variable is re-declared in the same scope. So let helps avoid naming collisions. 
 
 const tells us that we do not plan to change the value while let does. let would be used in something like a for loop. It has a different scope in comparison to var. Here is an example about importing a function from Redux called createStore to help render a GUI as a const object:
 
@@ -272,17 +270,15 @@ const is not truely about immutablity. ES6 const does not indicate that a value 
       last: 'Marley'
     };
     
-    // Re-assigning any value, including an object raises an exception
+    // Re-assigning any value, including an object [reference] raises an exception
     FULL_NAME = {
       first: 'Rick',
       last: 'Astley'
-    }; // throws TypeError: Assignment to constant variable.
+    }; // throws TypeError: Assignment to constant variable. [a new object literal so trying to change the reference]
     
-    // Modifiying properties on an object is just fine though
+    // Modifiying properties on an object is just fine though [no reference change]
     FULL_NAME.first = 'Rick';
     FULL_NAME.first; // => 'Rick';
-
-ie FULL_NAME cannot have a new value assigned, but properties on the object that is its value can be assigned new values. 
 
 
 const with curly braces can be very concise when it comes to object destructuring:
@@ -333,7 +329,7 @@ Hyphens are not allowed in JavaScript. It is reserved for subtractions. In progr
 
 JavaScript uses the Unicode character set.
 
-to make long statements more readable use the backslash (and use /*jshint multistr:true */ at the top of the file):
+To make long statements more readable use the backslash (and use /*jshint multistr:true */ at the top of the file):
 
 var text = "Hey, how are you \
 doing? My name is Emily.";
@@ -419,7 +415,7 @@ The typeof operator evaluates to "number", "string", or "boolean" if its operand
     Undefined	"undefined"
     Null	    "object"
     Array       "object"  [not useful. Array.isArray(myArray) introduced in es5]
-
+    NaN         "number"
 
 'typeof a' is not asking for the "type of a", but rather for the "type of the value currently in a." Only values have types in JavaScript; variables are just simple containers for those values. Remember that JavaScript has typed values, not typed variables.
 
@@ -511,13 +507,10 @@ This button would the simultaneously update the <div> and <p> elements.
 
 Two important flow statements are break and continue. The break statement "jumps out" of a loop. The continue statement "jumps over" one iteration in the loop. Examples:
 
-
     for (i = 0; i < 10; i++) {
         if (i === 3) { break; }
         text += "The number is " + i + "<br>";
     }                                           //the for loop never prints out the i = 3 case or beyond.
-
-
 
     for (i = 0; i < 10; i++) {
         if (i === 3) { continue; }
@@ -620,11 +613,12 @@ There are 6 primitive (single value) types.
 - string: a sequence of characters in single or double quotes. In other languages strings are non-primtive
 - symbol.
 
-JavaScript has 'dynamic typing'. This means that the same variable can be used for different types. That is, variables can hold differeny types of values because it is all figured out during execution. At various times while code is running one variable can change the type of value it contains:
+JavaScript has 'dynamic typing'. This means that the same variable can be used for different types. That is, variables can hold different types of values because it is all figured out during execution. At various times while code is running one variable can change the type of value it contains:
 
-var x;               // Now x is undefined
-var x = 5;           // Now x is a Number
-var x = "John";      // Now x is a String //this is all part of the same procedural code; the same variable is being used for different types. 
+//this is all part of the same procedural code; the same variable is being used for different types. 
+    var x;               // Now x is undefined
+    var x = 5;           // Now x is a Number
+    var x = "John";      // Now x is a String 
 
 This is both powerful and dangerous. In other languages 'static typing' is employed. You have to tell the compiler ahead of time what type of value a variable will hold: eg bool isNew = 'hello' will generate an error.
 
@@ -641,18 +635,12 @@ var z = 123e-5;     // 0.00123
 
 Infinity works much like we could expect. Eg -Infinity < Infinity evaluates to true while -Infinity+Infinity evalutate to NaN.] 
 
-
 Booleans can only have two values: true or false, and are often used with conditional testing (see later). Eg: var x = true;. A boolean results from a 'comparison' between any data types.
-
 
 You can use the JavaScript typeof operator (see above in the operator section) to find the type of a JavaScript variable: typeof 3.14         // Returns number. Can also use brakets like a function call:  typeof(3.14); 
 
 
-
-
-
 NaN, Null, and Undefined
-
 
 In JavaScript, a variable without a value, has the value undefined. The typeof is also undefined. Any variable can be emptied, by setting the value to undefined. The type will also be undefined:
 
@@ -678,10 +666,7 @@ null === undefined           // false (not of equal value and equal type)
 null == undefined            // true
 
 
-
-
 Not a Number (NaN)
-
 
 NaN is a "number" type:
 
@@ -1314,8 +1299,6 @@ The only other standard property of arguments is callee. This always refers to t
 
     myfunc(1, 2, 3);
 
-
-
 This construct is very useful and gives javascript functions a lot of flexibility. But there is an important gotcha. The arguments object behaves like an array, but it is not an actual array. It does not have Array in it's prototype chain and it does not respond to any array methods, e.g. arguments.sort() raises a TypeError. Instead you need to copy the values into a true array first. An easy approach is a for-loop:
 
     var args = [];
@@ -1339,11 +1322,10 @@ In ECMA 6 it is easier with a special 'from' method:
 
 
 
-
 CallBack Functions (see also Closures)
 
 
-Callback functions are derived from a programming paradigm known as functional programming. At a fundamental level, functional programming specifies the use of functions as arguments. A callback function, also known as a higher-order function, is a function that is passed to another function (let’s call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction. 
+Callback functions are derived from a programming paradigm known as functional programming. At a fundamental level, functional programming specifies the use of functions as arguments. A callback function, also known as a higher-order function, is a function that is passed to another function. 
 
 In JavaScript, functions are first-class objects. That is, functions are of the type Object and they can be used in a first-class manner like any other object (String, Array, Number, etc.) since they are in fact objects themselves. They can be stored in variables, passed as arguments to functions, created within functions, and returned from functions.
 
@@ -1366,7 +1348,7 @@ We can pass functions around like variables and return them in functions and use
 
 And since the containing function has the callback function in its parameter as a function definition, it can execute the callback anytime. Even without a name, it can still be accessed later via the arguments object by the containing function.
 
-When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined in the containing function. The callback function can access the containing functions’ variables, and even the variables from the global scope. This means the callback is a closure [see closures - function plus the variables locked in from the surrounding scope when the outter function was executed].
+When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined in the containing function. The callback function can access the containing functions’ variables, and even the variables from the global scope. This means the callback is a closure [see closures - function plus the variables locked in from the surrounding scope when the outer function was executed].
 
 We can use named or anonymous functions as callbacks. Here is an example with a named function:
 
@@ -1389,8 +1371,7 @@ We can use named or anonymous functions as callbacks. Here is an example with a 
         callback (options);
     }
     
-    // When we call the getInput function, we pass logStuff as a parameter.
-    // So logStuff will be the function that will called back (or executed) inside the getInput function
+When we call the getInput function, we pass logStuff as a parameter. So logStuff will be the function that will called back (or executed) inside the getInput function
     
     getInput ({name:"Rich", speciality:"JavaScript"}, logStuff);
     //  name: Rich
@@ -1399,7 +1380,6 @@ We can use named or anonymous functions as callbacks. Here is an example with a 
 
 
 Currying (Curry) Functions:
-
 
 Something like this:
 
@@ -1457,7 +1437,6 @@ Add parentheses around the function to indicate that it is a function expression
 
 In JavaScript, the thing called 'this', is the object that "owns" the current code. The value of this, when used in a function, is the object that "owns" the function.  Compare the next two functions. The second works on a property from some other object that has not been passed into the function:
 
-
     function talk(sound) {
         console.log(sound)
     }
@@ -1466,18 +1445,16 @@ In JavaScript, the thing called 'this', is the object that "owns" the current co
         console.log(this.sound)
     }
 
-
 When code is executed it enters a [function based] 'execution context'. Part of the set up for this context is the assignment of a value to 'this'. If the value assigned refers to an object then property accessors prefixed with the 'this' keyword reference properties of that object. If the value assigned (internally) is null then the this keyword will refer to the global object.
 
 So, the value of 'this' depends upon how a function is called. That is, how the execution context was generated.
-
 
 {
     Aside on global and context:
 
     When JS code is executed an execution context is created. This is where your code sits inside a 'variable environment' along side other things that have been supplied by the engine. One such thing is a variable called 'this'. In the global execution context a global object is also supplied.
 
-    In the global exececution context the global object is 'this'. In browsers this is the 'Window' object, and it is automatically supplied by the engine. In other environemnts, like node, it will be something else. The global object is accessible by all parts of the code. Each tab or window has it's own global execution context.
+    In the global exececution context the global object is 'this'. In browsers this is the 'Window' object, and it is automatically supplied by the engine. In other environemnts, like node, it will be something else. The global object is accessible by all parts of the code. Also, each tab or window has it's own global execution context.
 
     Another way of thinking about global is code 'not inside a function'. Variables and functions that are not inside a function are automatically attached to the global object as a key value pair.
 
@@ -1491,7 +1468,7 @@ So, the value of 'this' depends upon how a function is called. That is, how the 
 
 In most cases, the value of 'this' is determined by how a function is invoked. It can't be set by assignment during execution ('this' is not a variable. It is a keyword), and it may be different each time the function is called. It also has some differences between strict mode and non-strict mode. ES5 introduced the bind method to set the value of a function's this regardless of how it's called, and ECMAScript 2015 introduced arrow functions (see below) whose 'this' is lexically scoped; it is set to the 'this' value of the lexically enclosing execution context.
 
-JavaScript functions can be invoked in 4 different ways. Each method differs in how 'this' is initialized. The code in a function is not executed when the function is defined. It is executed when the function is invoked. Some people use the term "call a function" instead of "invoke a function". It is also quite common to say "call upon a function", "start a function", or "execute a function". Here, we will use invoke, because a JavaScript function can be invoked without being called (a bit of a non-distinction perhaps.But, when you call a function, you are directly telling it to run. When you invoke a function, you are letting something run it. eg myFunc() is an invocation and call, whereas myObj.myFunc() is only a call ????).
+JavaScript functions can be invoked in 4 different ways. Each method differs in how 'this' is initialized. The code in a function is not executed when the function is defined. It is executed when the function is invoked. Some people use the term "call a function" instead of "invoke a function". It is also quite common to say "call upon a function", "start a function", or "execute a function". Here, we will use invoke, because a JavaScript function can be invoked without being called (a bit of a non-distinction perhaps. But, when you call a function, you are directly telling it to run. When you invoke a function, you are letting something run it. eg myFunc() is an invocation and call, whereas myObj.myFunc() is only a call ????).
 
 1. In the global execution context (outside of any function), 'this' refers to the global object, whether in strict mode or not:
 
@@ -1516,13 +1493,13 @@ When a function is not a method, the value of this is not changed. Since the cod
 
     (note: using the window object as a variable can easily crash your program).
 
-    Also, there is no difference between function declations and function expressions:
+    Also, there is no difference between function declarations and function expressions:
 
     function a() {
         console.log(this);
     }
 
-    var b =  function() {
+    var b = function() {
         console.log(this);
     }
 
@@ -1555,8 +1532,7 @@ We could also change back to the global window by creating a new global variable
     var globalFunc = myObject.fullName;
     globalFunc();     // "comp gangsta"
 
-
-'this' is now being called in another execution context -  the global execution context. [i.e. we can type window.globalFunc(); which is what is implicitly happening here.] The usual situation in this case is that the global object will have no keys like lastName or fullname, and so you will get 'undefined'. This could be a source of bugs:
+'this' is now being called in another execution context -  the global execution context. [i.e. we can type window.globalFunc(); which is what is implicitly happening here.] The usual situation in this case is that the global object will have no keys like lastName or fullname, and so you will get 'undefined'. This could be a source of bugs.
 
     let dog = {
         sound: 'woof',
@@ -1607,30 +1583,32 @@ Arrow function example:
 
     const a1 = {
         name: "my name is a", 
-        log: function(){console.log(this)}
+        log: function() { console.log(this) }
     };
 
     const a2 = {
         name: "my name is a", 
-        log: ()=>{ console.log(this) }
+        log: () => { console.log(this) }
     };
      
     a1.log() // {name: "my name is a", log: ƒ}
      
     a2.log() // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
 
-Arrow functions 'don't have their own 'this'. Instead they retain the 'this' value of the enclosing lexical context.
+Arrow functions 'don't have their own 'this'. Instead they retain the 'this' value of the enclosing lexical context. Arrow functions follow the normal variable lookup rules. So while searching for this which is not present in current scope they end up finding this from its enclosing scope. 
 
-So, in this example the arrow function has it's `this` object determined by the surrounding lexical context. In this case the lexical context is the global context. As we know, another way of thinking about global is code 'not inside a function'. Variables and functions that are not inside a function are automatically attached to the global object.​ And in this case, the varibale of type object, a2, is not inside a function. It must be in the global context. That is, `a2.log()`, the arrow function, lexically sits inside the global execution context. 
+So, in this example the arrow function's execution context is created when it is called. However because we have an arrow funciton 'this' has not been assigned. So the scope chain, found by the surround lexical context, is followed. Here, because we are not inside a function, the surrounding lexical context, which is the next step in the scope chain, is the global context. As we know, another way of thinking about global is code 'not inside a function'. Variables and functions that are not inside a function are automatically attached to the global object.​ And in this case, the varibale of type object, a2, is not inside a function. It must be in the global context. That is, `a2.log()`, the arrow function, lexically sits inside the global execution context. 
 
-Since each [non-arrow] function has its own this binding, whose value depends on the way it is called, you cannot refer to the this of the wrapping scope in a regular function defined with the function keyword, whch might actually be useful. In the following code, 'this' is actually from a function that lexically wraps an arrow function:
+(Arrow functions also do not have their own arguments object. Thus, arguments is simply a reference to the arguments of the enclosing scope).
+
+Since non-arrow function's have their own 'this' binding you cannot refer to the this of the wrapping scope. Arrow functions allow us to do that. In the following code, 'this' is actually from a function that lexically wraps an arrow function:
 
     function normalize() {
       console.log(this.coords.map(num => num / this.length));
     }
+
     normalize.call({coords: [0, 2, 3], length: 5});
     // → [0, 0.4, 0.6]
-
 
 There is one 'gotcha' or bug in JS that relates to functions inside object methods. 
 
@@ -3681,7 +3659,6 @@ Here we change the lexial environment for b() and see that myVar comes from a():
     b(); // uncaught ReferenceError: b is not defined.
 
 Again, three execution contexts were created, but b()'s outer reference changed. The scope chain has an extra step. b()'s context is not created until a()'s context is created. Since b's context was created inside a's context, b's outer reference is to a's execution context.
-
 
 
 The main type of scope in Javascript is Lexical Scoping. Present in the language from the very beginning, this is the scope created within a function, and the one most developers are familiar with (traditionally functions were the only thing that could create a new scope). ES6 recently defined Block Scoping. This scope is created within curly braced blocks.
