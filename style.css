@@ -39,6 +39,7 @@ body {
     padding: 80px;
     width: 70%;
     margin: auto;
+    border-radius: 25px;
 }
 
 h2 {
@@ -124,7 +125,7 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/suburb.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/suburb-min.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -188,7 +189,7 @@ h3 {
 }
 
 #tp-logo {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
     padding-right: 10px;
     border-radius: 7px;
 }
@@ -209,6 +210,8 @@ h3 {
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
+    padding-bottom: 10px;
+    font-size: x-large;
 }
 
 .main-nav li a:link,
@@ -255,12 +258,13 @@ h3 {
 }
 
 .sticky .main-nav {
-    margin-top: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-    padding: 15px 0;
+    padding: 15px 0 0 0;
     color: #555;
 }
 
@@ -430,6 +434,10 @@ cite img {
 .service-block .bullet p {
     margin-left: 15px;
     display: inline-block;
+}
+
+#first-service-header {
+    text-align: left;
 }
 
 

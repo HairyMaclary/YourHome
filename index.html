@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Your Home is a high value property maintenance business. Dunedin, NZ.">
+    <meta name="description" content="Your Home property maintenance business. Dunedin, NZ.">
+    <meta name="keywords" content="Dunedin, New Zealand, home, house, maintenance, repairs, Jeremy Buis" />
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <!-- Geo Location -->
+    <meta name="geo.region" content="NZ-OTA" />
+    <meta name="geo.placename" content="Dunedin" />
+    <meta name="geo.position" content="-45.87876;170.502798" />
+    <meta name="ICBM" content="-45.87876, 170.502798" />
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="vendors/animate.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
@@ -24,7 +31,7 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Your Home</title>
+    <title>Your Home | Dunedin Home Maintenance</title>
 </head>
 
 <body>
@@ -50,12 +57,11 @@
             </div>
         </nav>
         <div class="header-text-box">
-            <h1>Don't wait forever...<br>get it fixed now!</h1>
+            <h1>Get it fixed now!</h1>
             <h3>Value for money property maintenance</h3>
             <div class="header-button-container">
                 <a class="btn btn-full js--wp0" href="tel:021349364">Call</a>
-                <a class="btn btn-full js--scroll-to-contact js--wp0" href="#">Easy Quote</a>
-                <a class="btn btn-ghost js--scroll-to-services" href="#">Show me more</a>
+                <a class="btn btn-full js--scroll-to-services" href="#">Show me more</a>
             </div>
         </div>
     </header>
@@ -82,7 +88,7 @@
 
         <div class="service-block">
             <div class="text-container">
-                <p style="text-align: left;">On the inside...</p>
+                <p id='first-service-header'>On the inside...</p>
                 <div class="bullet">
                     <i class="fas fa-check-double"></i>
                     <p>holes in walls</p>
@@ -129,7 +135,7 @@
 
         <div class="service-block">
             <div class="text-container">
-                <p style="text-align: left;">And pretty much any general maintenance for landlords and tennants</p>
+                <p id='first-service-header'>And general maintenance for landlords and tennants:</p>
                 <div class="bullet">
                     <i class="fas fa-check-double"></i>
                     <p>insulation checks and top ups</p>
@@ -151,6 +157,8 @@
     <section class="section section-form js--section-form" id="contact">
         <div class="section-header"  style="display: flex; flex-direction: column;">
             <h2>We're happy to hear from you</h2>
+        </div> 
+        <div class='contact-buttons' style='display: flex; flex-direction: column;'>
             <div 
                 class="call-button js--wp5" 
                 style="align-self: center; margin-bottom: 10px">
@@ -158,9 +166,21 @@
                     class="btn btn-full" 
                     href="tel:021349364"
                     style="align-self: center;"
-                >Call: 021 249 364</a>
+                    >Call: 021 349 364
+                </a>
             </div>
-            <p class="long-copy">Or, enter your details to arrange a quote or ask for more information.</p>
+            <div 
+                class="call-button js--wp5" 
+                style="align-self: center; margin-bottom: 10px">
+                <a 
+                    class="btn btn-full" 
+                    href="mailto:enquiries@yourhomedunedin.site"
+                    style="align-self: center;"
+                    >email: enquiries@yourhomedunedin.site
+                </a>
+        </div>
+        </div>
+            <!-- <p class="long-copy">Or, enter your details to arrange a quote or ask for more information.</p>
         </div>
         <div>
             <form method="post" action="mailer.php" class="contact-form">
@@ -187,14 +207,14 @@
                 <label id="label-space">&nbsp;</label>
                 <input class="js--wp4" type="submit" value="Send it!">
             </form>
-        </div>
+        </div> -->
     </section>
 
     <section class="section about js--section-about" id="about">
         <div class="section-header">
             <h2>About Your Home</h2>
             <p class="long-copy">After realising that my friends and 
-                family just couldn't find trade people for simple jobs 
+                family just couldn't find trades people for simple jobs 
                 I realised that there had to be a better way. 
                 I've been renovating houses for around 15 years, 
                 and so I knew that I had the skills to help. 
@@ -209,7 +229,7 @@
             <img class="js--wp2" src="./img/toolRack.jpg" alt="J-Kadoodlehopper">
         </div>
         <div class="call-button js--wp5">
-            <a class="btn btn-full" href="tel:021349364">021 249 364</a>
+            <a class="btn btn-full" href="tel:021349364">Call: 021 349 364</a>
         </div>
     </section>
 
